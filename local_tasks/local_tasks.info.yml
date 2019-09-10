@@ -1,0 +1,7 @@
+name: 'Local tasks'
+type: module
+description: 'This module provides an examples how to use Drupal local tasks'
+core: 8.x
+package: 'LOBsTerr'
+dependencies:
+  - node

@@ -1,0 +1,11 @@
+local_tasks.node_extra_settings:
+  path: '/node/{node}/extra-settings'
+  defaults:
+    _controller: '\Drupal\local_tasks\Controller\LocalTasksController::nodeExtraSettings'
+    _title: 'Node extra settings'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: 'entity:node'
