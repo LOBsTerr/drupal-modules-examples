@@ -1,7 +1,34 @@
-# In this example we add an additional tab to the node page
+# In this example we add an additional tab to the node page.
 local_tasks.node_extra_settings: # The ID of local task is the same as route, to make it easier to control.
   route_name: 'local_tasks.node_extra_settings' # The name of our route, provided in local_tasks.routing.yml.
   title: 'Extra settings' # This string will be displayed as a title of a tab.
   base_route: 'entity.node.canonical' # We use node entity in order to group tabs together.
   weight: 100
 
+
+# in this example we add tabs for custom page.
+local_tasks.eshop_settings: # The ID of local task is the same as route, to make it easier to control.
+  route_name: 'local_tasks.eshop_settings' # A route for e-shop settings, provided in local_tasks.routing.yml.
+  title: 'Eshop settings' # This string will be displayed as a title of a tab.
+  base_route: 'local_tasks.eshop_settings' # !!!important For default tab the base_route should be the same as route_name.
+  weight: 10
+
+local_tasks.eshop_meta_settings: # The ID of local task is the same as route, to make it easier to control.
+  route_name: 'local_tasks.eshop_meta_settings' # A route for e-shop settings, provided in local_tasks.routing.yml.
+  title: 'Eshop meta settings' # This string will be displayed as a title of a tab.
+  base_route: 'local_tasks.eshop_settings' # This will allow to display it in the same level with "E-shop settings"
+  weight: 20
+
+local_tasks.products_settings: # The ID of local task is the same as route, to make it easier to control.
+  route_name: 'local_tasks.products_settings' # A route for e-shop settings, provided in local_tasks.routing.yml.
+  title: 'Products settings' # This string will be displayed as a title of a tab.
+  base_route: 'local_tasks.eshop_settings' # Because we want to group tabs we should set to default one, in our case E-shop settings.
+  parent_id: 'local_tasks.eshop_settings' # This will display item under "Eshop settings" tab.
+  weight: 10
+
+local_tasks.categories_settings: # The ID of local task is the same as route, to make it easier to control.
+  route_name: 'local_tasks.categories_settings' # A route for e-shop settings, provided in local_tasks.routing.yml.
+  title: 'Categories settings' # This string will be displayed as a title of a tab.
+  base_route: 'local_tasks.eshop_settings' # Because we want to group tabs we should set to default one, in our case E-shop settings.
+  parent_id: 'local_tasks.eshop_settings' # This will display item under "Eshop settings" tab.
+  weight: 20

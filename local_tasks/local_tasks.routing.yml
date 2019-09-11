@@ -1,3 +1,4 @@
+# Route for node extra settings tab.
 local_tasks.node_extra_settings:
   path: '/node/{node}/extra-settings'
   defaults:
@@ -9,3 +10,37 @@ local_tasks.node_extra_settings:
     parameters:
       node:
         type: 'entity:node'
+
+
+# Routes for custom page (eshop) tabs.
+local_tasks.eshop_settings:
+  path: '/eshop-settings'
+  defaults:
+    _controller: '\Drupal\local_tasks\Controller\LocalTasksController::eshopSettings'
+    _title: 'E-shop settings'
+  requirements:
+    _permission: 'access content'
+
+local_tasks.eshop_meta_settings:
+  path: '/eshop-meta-settings'
+  defaults:
+    _controller: '\Drupal\local_tasks\Controller\LocalTasksController::eshopMetaSettings'
+    _title: 'E-shop meta settings'
+  requirements:
+    _permission: 'access content'
+
+local_tasks.products_settings:
+  path: '/eshop-settings/products-settings'
+  defaults:
+    _controller: '\Drupal\local_tasks\Controller\LocalTasksController::productsSettings'
+    _title: 'Products settings'
+  requirements:
+    _permission: 'access content'
+
+local_tasks.categories_settings:
+  path: '/eshop-settings/categories-settings'
+  defaults:
+    _controller: '\Drupal\local_tasks\Controller\LocalTasksController::categoriesSettings'
+    _title: 'Categories settings'
+  requirements:
+    _permission: 'access content'
