@@ -1,0 +1,11 @@
+custom_entity_form_mode.email_settings:
+  path: '/email-settings/{node}'
+  defaults:
+    _controller: '\Drupal\custom_entity_form_mode\Controller\CustomEntityFormModeController::emailSettings'
+    _title: 'E-mail settings'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      node:
+        type: 'entity:node'

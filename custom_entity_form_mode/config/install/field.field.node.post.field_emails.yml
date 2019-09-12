@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_emails
+    - node.type.post
+id: node.post.field_emails
+field_name: field_emails
+entity_type: node
+bundle: post
+label: Emails
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

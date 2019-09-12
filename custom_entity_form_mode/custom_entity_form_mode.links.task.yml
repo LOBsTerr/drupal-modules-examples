@@ -1,0 +1,5 @@
+custom_entity_form_mode.email_settings:
+  route_name: 'custom_entity_form_mode.email_settings'
+  title: 'E-mail settings'
+  base_route: 'entity.node.canonical'
+  weight: 100

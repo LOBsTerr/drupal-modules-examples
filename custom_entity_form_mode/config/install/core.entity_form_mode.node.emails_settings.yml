@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.emails_settings
+label: 'Emails settings'
+targetEntityType: node
+cache: true

@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.emails_settings
+    - field.field.node.post.field_emails
+    - node.type.post
+id: node.post.emails_settings
+targetEntityType: node
+bundle: post
+mode: emails_settings
+content:
+  field_emails:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+hidden:
+  created: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  uid: true

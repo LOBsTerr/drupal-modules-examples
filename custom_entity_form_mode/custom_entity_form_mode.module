@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * @file
+ * Contains custom_entity_form_mode.module.
+ */
+
+
+/**
+ * Implements hook_entity_type_alter().
+ */
+function custom_entity_form_mode_entity_type_alter(array &$entity_types) {
+  // You can provide more complex logic and checks here, we are sure that node
+  // module is active and it is enabled in our case.
+  $default_handler_class = $entity_types['node']->getHandlerClasses()['form']['default'];
+  $entity_types['node']->setFormClass('emails_settings', $default_handler_class);
+}

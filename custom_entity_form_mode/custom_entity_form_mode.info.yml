@@ -1,0 +1,8 @@
+name: 'Custom entity form mode'
+type: module
+description: 'Provides an example of custom entity form mode'
+core: 8.x
+package: LOBsTerr
+dependencies:
+  - node
+  - menu_ui
